@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Lend-a-Tool</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #20356F 0%, #2a4a8f 50%, #4a69bd 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 40px;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .logo-placeholder {
+            width: 60px;
+            height: 60px;
+            background: #20356F;
+            border-radius: 15px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .back-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: white;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: white;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 30px 0 16px 0;
+            color: #F64954;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .beta-notice {
+            background: rgba(246, 73, 84, 0.1);
+            border: 1px solid rgba(246, 73, 84, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .beta-notice p {
+            margin-bottom: 0;
+            color: #F64954;
+            font-weight: 500;
+        }
+
+        .beta-notice strong {
+            color: #F64954;
+        }
+
+        a {
+            color: #F64954;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .section {
+            margin-bottom: 2em;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 16px;
+            }
+            
+            .content-card {
+                padding: 25px 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.2rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                 <img src="Logo SM WS.png" alt="Lend-a-Tool Logo" style="width: 70px; height: 60px; background: white; border-radius: 10px; padding: 8px;">
+            </div>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+
+        <div class="content-card">
+            <section class="section">
+                <h1>About Us</h1>
+                
+                <p>Welcome to Lend-a-Tool, the platform that allows you to find the tools you need, and make money on the tools you have.</p>
+                
+                <p>Users can rent equipment from others in the community, or earn money by listing their own tools for rent.</p>
+                
+                <div class="beta-notice">
+                    <p><strong>Beta Notice:</strong> We're currently in beta and only accepting a limited number of users. If you cannot sign up, please check back later or email us for access.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div style="margin-bottom: 15px;">
+            <a href="about-us.html">About Us</a>
+            <a href="subscriptions.html">Subscriptions</a>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <a href="refund-policy.html">Refund Policy</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+            <a href="mailto:support@lendatool.dev?subject=Support Request">Contact Us</a>
+        </div>
+        © 2024 Lend-a-Tool. All rights reserved.
+    </div>
+</body>
+</html>
