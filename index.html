@@ -62,6 +62,51 @@
             margin-bottom: 30px;
         }
 
+        .signup-section {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px 25px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 40px;
+        }
+
+        .signup-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .signup-section p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .signup-btn {
+            background: #F64954;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 18px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(246, 73, 84, 0.3);
+            min-height: 56px;
+            line-height: 20px;
+        }
+
+        .signup-btn:hover {
+            background: #e03d47;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(246, 73, 84, 0.4);
+        }
+
         .steps {
             margin-bottom: 40px;
         }
@@ -107,10 +152,33 @@
             line-height: 1.4;
         }
 
+        .app-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px 25px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            margin-bottom: 30px;
+        }
+
+        .app-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .app-section p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
         .app-buttons {
             display: flex;
             gap: 12px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .app-btn {
@@ -136,48 +204,25 @@
             transform: translateY(-1px);
         }
 
-        .signup-section {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(15px);
-            border-radius: 20px;
-            padding: 30px 25px;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .portal-url {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 12px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            margin-top: 15px;
+            word-break: break-all;
+            border: 1px dashed rgba(255, 255, 255, 0.3);
         }
 
-        .signup-section h3 {
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .signup-section p {
-            font-size: 0.95rem;
-            opacity: 0.9;
-            margin-bottom: 25px;
-            line-height: 1.5;
-        }
-
-        .signup-btn {
-            background: #F64954;
-            color: white;
-            border: none;
+        .note {
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 12px;
-            padding: 18px 40px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 15px rgba(246, 73, 84, 0.3);
-            min-height: 56px;
-            line-height: 20px;
-        }
-
-        .signup-btn:hover {
-            background: #e03d47;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(246, 73, 84, 0.4);
+            padding: 16px;
+            margin-top: 20px;
+            font-size: 0.85rem;
+            opacity: 0.8;
+            line-height: 1.4;
         }
 
         .footer {
@@ -193,16 +238,6 @@
             margin: 0 10px;
         }
 
-        .note {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 16px;
-            margin-top: 20px;
-            font-size: 0.85rem;
-            opacity: 0.8;
-            line-height: 1.4;
-        }
-
         @media (max-width: 480px) {
             .container {
                 padding: 16px;
@@ -216,7 +251,7 @@
                 flex-direction: column;
             }
             
-            .signup-section {
+            .signup-section, .app-section {
                 padding: 25px 20px;
             }
         }
@@ -233,50 +268,56 @@
             <p>Find the tools you need and earn money on the ones you have - all in one trusted community.</p>
         </div>
 
+        <div class="signup-section">
+            <h3>Get Started Now</h3>
+            <p>Create your account and start sharing tools right away:</p>
+            <a href="https://lendatool.zohocreatorportal.com" class="signup-btn">Register Here</a>
+        </div>
+
         <div class="steps">
             <div class="step">
                 <div class="step-number">1</div>
                 <div class="step-content">
-                    <h3>Download the App</h3>
-                    <p>Get the Zoho Creator Portal app to access our lending platform.</p>
+                    <h3>Create Your Account</h3>
+                    <p>Click the link above to register and complete your profile setup.</p>
                 </div>
             </div>
 
             <div class="step">
                 <div class="step-number">2</div>
                 <div class="step-content">
-                    <h3>Complete Your Registration</h3>
-                    <p>Use the sign-up link below to create your account with the correct portal settings.</p>
+                    <h3>Start Using the Platform</h3>
+                    <p>Browse tools, list your own, and connect with your community right in your browser.</p>
                 </div>
             </div>
 
             <div class="step">
                 <div class="step-number">3</div>
                 <div class="step-content">
-                    <h3>Start Sharing Tools!</h3>
-                    <p>Find the tools you need or list your own to start earning money.</p>
+                    <h3>Download the App (Optional)</h3>
+                    <p>For mobile convenience, download the app and sign in with your account.</p>
                 </div>
             </div>
         </div>
 
-        <div class="app-buttons">
-            <a href="https://apps.apple.com/us/app/customer-portal-zoho-creator/id1146710936" class="app-btn">
-                <span>📱</span>
-                iOS App Store
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.zoho.creator.portal" class="app-btn">
-                <span>🤖</span>
-                Google Play
-            </a>
-        </div>
-
-        <div class="signup-section">
-            <h3>Ready to Sign Up?</h3>
-            <p>After downloading the app, use this link to register with the correct portal URL:</p>
-            <a href="https://lendatool.zohocreatorportal.com" class="signup-btn">Complete Registration</a>
+        <div class="app-section">
+            <h3>Want the Mobile App?</h3>
+            <p>After creating your account, you can download the Zoho Creator Portal app for mobile access:</p>
             
+            <div class="app-buttons">
+                <a href="https://apps.apple.com/us/app/customer-portal-zoho-creator/id1146710936" class="app-btn">
+                    <span>📱</span>
+                    iOS App Store
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.zoho.creator.portal" class="app-btn">
+                    <span>🤖</span>
+                    Google Play
+                </a>
+            </div>
+
             <div class="note">
-                💡 <strong>Important:</strong> In order for the app to work properly, you must download the app first, then use this registration link.<br>Alternatively, you can access the platform in a browser.
+                💡 <strong>App Setup:</strong> After downloading, enter this portal URL in the app, then sign in with your account credentials:
+                <div class="portal-url">https://lendatool.zohocreatorportal.com</div>
             </div>
         </div>
     </div>
