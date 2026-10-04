@@ -126,6 +126,10 @@
             transform: translateY(-2px);
         }
 
+        .step:last-child {
+    margin-bottom: 0;
+}
+
         .step-number {
             background: #F64954;
             color: white;
@@ -238,6 +242,83 @@
             margin: 0 10px;
         }
 
+        .help-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 40px;
+    font: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+    opacity: 0.9;
+    min-height: 48px;
+    transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.help-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 1;
+}
+
+.help-link:focus-visible,
+.video-close:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+.video-modal {
+    border: none;
+    background: transparent;
+    margin: auto;
+    max-width: 100vw;
+    overflow: visible;
+}
+
+.video-modal::backdrop {
+    background: rgba(12, 20, 45, 0.85);
+    backdrop-filter: blur(6px);
+}
+
+.video-modal-frame {
+    position: relative;
+    aspect-ratio: 9 / 16;
+    height: min(78vh, 640px);
+    max-width: 92vw;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+.video-modal-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-close {
+    display: block;
+    margin: 14px auto 0;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 999px;
+    padding: 10px 24px;
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
         @media (max-width: 480px) {
             .container {
                 padding: 16px;
@@ -300,6 +381,12 @@
             </div>
         </div>
 
+        <button type="button" class="help-link" id="openVideo">
+            <span aria-hidden="true">▶</span> Prefer a walkthrough? Watch how to sign up
+        </button>
+
+        <div class="app-section">
+
         <div class="app-section">
             <h3>Want the Mobile App?</h3>
             <p>After creating your account, you can download the Zoho Creator Portal app for mobile access:</p>
@@ -335,6 +422,33 @@
         </div>
         © 2024 Lend-a-Tool. All rights reserved.
     </div>
+    <dialog class="video-modal" id="videoModal" aria-label="How to sign up for Lend-a-Tool">
+    <div class="video-modal-frame" id="videoHolder"></div>
+    <button type="button" class="video-close" id="closeVideo">Close</button>
+</dialog>
+
+<script>
+    (function () {
+        // Replace YOUR_VIDEO_ID with your YouTube video ID
+        var VIDEO_SRC = 'https://www.youtube-nocookie.com/embed/41bE-Ep8G9M?rel=0&autoplay=1&playsinline=1';
+        var modal = document.getElementById('videoModal');
+        var holder = document.getElementById('videoHolder');
+        var opener = document.getElementById('openVideo');
+
+        function open() {
+            holder.innerHTML = '<iframe src="' + VIDEO_SRC + '" title="How to sign up for Lend-a-Tool" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+            modal.showModal();
+        }
+        function close() {
+            modal.close();
+        }
+
+        opener.addEventListener('click', open);
+        document.getElementById('closeVideo').addEventListener('click', close);
+        modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
+        modal.addEventListener('close', function () { holder.innerHTML = ''; opener.focus(); });
+    })();
+</script>
 </body>
 </html>
 
